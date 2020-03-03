@@ -9,3 +9,4 @@ w00t
 1. `git submodule update --init --recursive`
 1. Share the `vip-go-mu-plugins` directory in your Docker config
 1. `docker-compose up`
+1. Browse to http://localhost:8000
