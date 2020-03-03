@@ -10,3 +10,9 @@ w00t
 1. Share the `vip-go-mu-plugins` directory in your Docker config
 1. `docker-compose up`
 1. Browse to http://localhost:8000
+
+## CLI
+
+You can issue CLI commands like so:
+
+`docker-compose run wpcli wp post list`
