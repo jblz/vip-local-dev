@@ -13,6 +13,11 @@ w00t
 
 This will create a site using the default values
 
+## What's included
+
+1. [`vip-go-mu-plugins`](https://github.com/Automattic/vip-go-mu-plugins) is included via submodule and mounted into `wp-content/mu-plugins`.
+1. [`vip-go-skeleton`](https://github.com/Automattic/vip-go-skeleton) is included via submodule --- Will be overridable via env var. I'm still figuring this bit out :)
+
 ## Customizing the Install
 
 1. If you've created a site using this tool before, you'll need to clear it out. Follow the instructions under [Starting over](#starting-over)
