@@ -19,9 +19,22 @@ SITE_URL=${WPVIP_SITE_URL:-"http://localhost"}
 
 if [[ -z "$WPVIP_MULTISITE" ]] || [[ "$WPVIP_MULTISITE" -eq "0" ]] || [[ ! $WPVIP_MULTISITE ]]; then
     echo "Installing WordPress";
-    wp core install --url="$SITE_URL" --title="$SITE_TITLE" --admin_user="$ADMIN_USER" --admin_password="$ADMIN_PASS" --admin_email="$ADMIN_EMAIL" &&
+    wp core install \
+        --url="$SITE_URL" \
+        --title="$SITE_TITLE" \
+        --admin_user="$ADMIN_USER" \
+        --admin_password="$ADMIN_PASS" \
+        --admin_email="$ADMIN_EMAIL" \
+        --skip-email &&
         echo "🚀 Installed WordPress at: $SITE_URL";
 else
     echo "Installing WordPress MULTISITE";
-    echo "TODO";
+    wp core multisite-install \
+        --url="$SITE_URL" \
+        --title="$SITE_TITLE" \
+        --admin_user="$ADMIN_USER" \
+        --admin_password="$ADMIN_PASS" \
+        --admin_email="$ADMIN_EMAIL" \
+        --skip-email &&
+        echo "🚀 Installed WordPress Multisite at: $SITE_URL";
 fi
