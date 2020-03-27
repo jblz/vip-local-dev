@@ -38,9 +38,7 @@ services:
      build:
       context: ./context
       dockerfile: ../wpcli/Dockerfile
-     environment:
-      - VIP_GO_EMPTY_SITE
-      - VIP_GO_MULTISITE
+     env_file: .env
      volumes:
        - wp_data:/var/www/html
        - ./vip-go-mu-plugins:/var/www/html/wp-content/mu-plugins
