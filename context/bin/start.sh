@@ -13,7 +13,7 @@ fi
 
 ADMIN_EMAIL=${WPVIP_ADMIN_EMAIL:-"nobody@example.com"}
 ADMIN_PASS=${WPVIP_ADMIN_PASS:-password}
-ADMIN_USER=${WPVIP_ADMIN_USER:-admin}
+ADMIN_USER=${WPVIP_ADMIN_USER:-vipadmin}
 SITE_TITLE=${WPVIP_SITE_TITLE:-Just Another VIP Test Site}
 SITE_URL=${WPVIP_SITE_URL:-"http://localhost"}
 
