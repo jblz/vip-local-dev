@@ -35,8 +35,12 @@ services:
      depends_on:
        - db
        - wordpress
-     image: wordpress:cli
-     #user: xfs
+     build:
+      context: ./context
+      dockerfile: ../wpcli/Dockerfile
+     environment:
+      - VIP_GO_EMPTY_SITE
+      - VIP_GO_MULTISITE
      volumes:
        - wp_data:/var/www/html
        - ./vip-go-mu-plugins:/var/www/html/wp-content/mu-plugins
